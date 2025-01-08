@@ -1,0 +1,142 @@
+.testimonials.style2 {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .section-title h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .section-title p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .single-testimonial {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 30px;
+  }
+  
+  .single-testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .inner-content {
+    padding: 20px;
+  }
+  
+  .img_car {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .img_car img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .single-testimonial:hover .img_car img {
+    transform: scale(1.05);
+  }
+  
+  .text {
+    margin-top: 20px;
+  }
+  
+  .text h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .text p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .author .name {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .author .deg {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .view-details-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #1a76d1;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .view-details-btn:hover {
+    background-color: #1257a9;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .section-title h2 {
+      font-size: 2rem;
+    }
+  
+    .single-testimonial {
+      margin-bottom: 20px;
+    }
+  
+    .img_car img {
+      height: 180px;
+    }
+  
+    .text h3 {
+      font-size: 1.3rem;
+    }
+  
+    .author img {
+      width: 40px;
+      height: 40px;
+    }
+  
+    .author .name {
+      font-size: 1rem;
+    }
+  }

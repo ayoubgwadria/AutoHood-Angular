@@ -1,0 +1,48 @@
+<section class="testimonials style2 section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title">
+          <h2 class="wow fadeInUp" data-wow-delay=".4s">Our Car Listings</h2>
+          <p class="wow fadeInUp" data-wow-delay=".6s">
+            Browse through our selection of quality vehicles
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12" *ngFor="let car of cars">
+        <!-- Start Single Car Listing -->
+        <div class="single-testimonial">
+          <div class="inner-content">
+            <div class="img_car">
+              <img
+                src="../../../assets/images/car.jpg"
+                alt="Car Image"
+              />
+            </div>
+            <div class="text">
+              <h3>{{ car.make }} {{ car.model }}</h3>
+              <p>
+                <strong>Year:</strong> {{ car.year }}<br>
+                <strong>Price:</strong> {{ car.price }} TND
+              </p>
+            </div>
+            <div class="author">
+              <img
+                src="https://via.placeholder.com/100x100"
+                alt="Vendor Image"
+              />
+              <h4 class="name">
+                {{ car.vendor.firstname }} {{ car.vendor.lastname }}
+                <span class="deg">Vendor</span>
+              </h4>
+            </div>
+            <a [routerLink]="['/car',car.id]" class="view-details-btn">View Details</a>
+          </div>
+        </div>
+        <!-- End Single Car Listing -->
+      </div>
+    </div>
+  </div>
+</section>

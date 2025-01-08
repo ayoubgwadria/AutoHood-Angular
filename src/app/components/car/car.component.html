@@ -1,0 +1,70 @@
+<!-- Start Breadcrumbs -->
+<div class="breadcrumbs" *ngIf="car">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
+                <div class="breadcrumbs-content">
+                    <h1 class="page-title">{{car.make}} {{car.model}}</h1>
+                    <ul class="breadcrumb-nav">
+                        <li><a routerLink="/">Home</a></li>
+                        <li><a routerLink="/cars">Cars</a></li>
+                        <li>{{car.make}} {{car.model}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Start Car Details Area -->
+<section class="freatures section bg-white" *ngIf="car">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12">
+                <div class="image wow fadeInLeft" data-wow-delay=".3s">
+                    <img src="../../../assets/images/car.jpg" [alt]="car.make + ' ' + car.model">
+                </div>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="content">
+                    <h3 class="heading wow fadeInUp" data-wow-delay=".5s">
+                        <span>{{car.year}} {{car.make}} {{car.model}}</span>
+                        Price: {{car.price}} TND
+                    </h3>
+                    <!-- Start Car Details -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".6s">
+                        <div class="f-icon">
+                            <i class="lni lni-car"></i>
+                        </div>
+                        <h4>Specifications</h4>
+                        <p>Year: {{car.year}}<br>
+                           Make: {{car.make}}<br>
+                           Model: {{car.model}}</p>
+                    </div>
+                    <!-- End Car Details -->
+                    <!-- Start Vendor Details -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay=".7s">
+                        <div class="f-icon">
+                            <i class="lni lni-user"></i>
+                        </div>
+                        <h4>Vendor Information</h4>
+                        <p>Name: {{car.vendor.firstname}} {{car.vendor.lastname}}<br>
+                           Contact: {{'Not available'}}</p>
+                    </div>
+                    <!-- End Vendor Details -->
+                    <!-- Start Car Description -->
+                    <div class="single-feature wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="f-icon">
+                            <i class="lni lni-text-align-justify"></i>
+                        </div>
+                        <h4>Description</h4>
+                        <p>{{car.description}}</p>
+                    </div>
+                    <!-- End Car Description -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Car Details Area -->

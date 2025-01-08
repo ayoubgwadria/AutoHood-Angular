@@ -1,0 +1,139 @@
+<div class="breadcrumbs">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-6 offset-lg-3 col-md-12 col-12">
+        <div class="breadcrumbs-content">
+          <h1 class="page-title">Add New Car</h1>
+          <ul class="breadcrumb-nav">
+            <li><a routerLink="/">Home</a></li>
+            <li><a routerLink="/cars">Cars</a></li>
+            <li>Add New Car</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End Breadcrumbs -->
+
+<!-- Start Add Car Area -->
+<div class="add-car section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-12">
+        <div class="add-car-info-wrapper">
+          <div class="main-title">
+            <h2>Add a New Car</h2>
+            <p>
+              Please fill out the form with accurate information about the car
+              you want to add.
+            </p>
+          </div>
+          <div class="add-car-info-block">
+            <h3 class="title">Guidelines</h3>
+            <ul class="guidelines-list">
+              <li>Ensure all required fields are filled.</li>
+              <li>Provide clear and accurate details about the car.</li>
+              <li>Upload high-quality images of the car.</li>
+            </ul>
+          </div>
+          <div class="add-car-info-block">
+            <h3 class="title">Need Help?</h3>
+            <p><i class="lni lni-envelope"></i> Email: supportcardealer.com</p>
+            <p><i class="lni lni-phone"></i> Phone: +216 55.895.371</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-12">
+        <div class="add-car-form">
+          <h3 class="form-title">Car Details</h3>
+          <form class="form" (ngSubmit)="onSubmit()">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="lni lni-car"></i>
+                    <input
+                      name="make"
+                      type="text"
+                      placeholder="Make*"
+                      [(ngModel)]="carRequest.make"
+                      required
+                    />
+                  </div>
+                  <div class="alert alert-danger">Make is required.</div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="lni lni-car-alt"></i>
+                    <input
+                      name="model"
+                      type="text"
+                      placeholder="Model*"
+                      [(ngModel)]="carRequest.model"
+                      required
+                    />
+                  </div>
+                  <div class="alert alert-danger">Model is required.</div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="lni lni-calendar"></i>
+                    <input
+                      name="year"
+                      type="number"
+                      placeholder="Year*"
+                      [(ngModel)]="carRequest.year"
+                      required
+                    />
+                  </div>
+                  <div class="alert alert-danger">Year is required.</div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-6 col-12">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="lni lni-dollar"></i>
+                    <input
+                      name="price"
+                      type="number"
+                      placeholder="Price*"
+                      [(ngModel)]="carRequest.price"
+                      required
+                    />
+                  </div>
+                  <div class="alert alert-danger">Price is required.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="form-group">
+                  <div class="input-icon">
+                    <i class="lni lni-text-align-justify"></i>
+                    <textarea
+                      placeholder="Description*"
+                      name="description"
+                      id="description-area"
+                      class="form-control"
+                      [(ngModel)]="carRequest.description"
+                      required
+                    ></textarea>
+                  </div>
+                  <div class="alert alert-danger">Description is required.</div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="button">
+                  <button type="submit" class="btn">Add Car</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
