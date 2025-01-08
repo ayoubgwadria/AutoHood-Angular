@@ -12,13 +12,14 @@ import { ListCarComponent } from './components/list-car/list-car.component';
 import {AuthInterceptor} from '../app/services/Auth-interceptor.service';
 import { CarComponent } from './components/car/car.component';
 import { AddCarComponent } from './components/add-car/add-car.component';
-import { WcHomeComponent } from './components/home/wc-home/wc-home.component';
-import { FeaturesComponent } from './components/home/features/features.component';
-import { ListingsComponent } from './components/home/listings/listings.component';
-import { TestimonialsComponent } from './components/home/testimonials/testimonials.component';
-import { FAQComponent } from './components/home/faq/faq.component';
-import { ContactComponent } from './components/home/contact/contact.component';
-import { HomePagesComponent } from './components/home-pages/home-pages.component';
+import { WcHomeComponent } from './components/homePages/wc-home/wc-home.component';
+import { FeaturesComponent } from './components/homePages/features/features.component';
+import { ListingsComponent } from './components/homePages/listings/listings.component';
+import { TestimonialsComponent } from './components/homePages/testimonials/testimonials.component';
+import { FAQComponent } from './components/homePages/faq/faq.component';
+import { ContactComponent } from './components/homePages/contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { HomePagesComponent } from './components/home-pages/home-pages.component
     TestimonialsComponent,
     FAQComponent,
     ContactComponent,
-    HomePagesComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
