@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { CarRequest } from '../../services/car/DTO/CarRequest';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CarService } from '../../services/car/car.service';
 import { CarResponse } from '../../services/car/DTO/CarResponse';
-import { error } from 'console';
 import {jwtDecode} from 'jwt-decode';
 
 @Component({
@@ -15,8 +14,9 @@ export class AddCarComponent {
   carRequest: CarRequest={ make: '', model: '', year: 0, price: 0, description: '' };
   errorMessage: string = '';
   successMessage: string = '';
+  isLoading:boolean=false;
 
-  constructor( private carService: CarService) {}
+  constructor( private carService: CarService,private router:Router) {}
 
   getVendorIdFromToken(): number | null {
     const token = localStorage.getItem('authToken');
@@ -38,6 +38,10 @@ export class AddCarComponent {
       this.carService.addCar(this.carRequest, vendorId).subscribe(
         (response: CarResponse) => {
           this.successMessage = response.message;
+          this.isLoading=true;
+          setTimeout(()=>{
+          this.router.navigate(['/car', response.car.id]);
+          },2000)
         },
         (error) => {
           console.error('Error adding car details:', error);

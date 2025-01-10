@@ -19,6 +19,7 @@ import { TestimonialsComponent } from './components/homePages/testimonials/testi
 import { FAQComponent } from './components/homePages/faq/faq.component';
 import { ContactComponent } from './components/homePages/contact/contact.component';
 import { HomeComponent } from './components/home/home.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { HomeComponent } from './components/home/home.component';
     AppRoutingModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatProgressSpinnerModule
     
   ],
   providers: [

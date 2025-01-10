@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { error } from 'console';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-login',
@@ -11,7 +13,8 @@ export class LoginComponent {
   loginRequest={email:'',password:''}
   errorMessage:string='';
   successMessage:string='';
-  constructor(private authservice:AuthService){}
+  isLoading:boolean=false;
+  constructor(private authservice:AuthService, private router:Router) { }
 
   onSubmit(){
     console.log(this.loginRequest);
@@ -21,8 +24,12 @@ export class LoginComponent {
         this.successMessage=reponse.message;
         localStorage.setItem('authToken', reponse.token);
         setTimeout(()=>{
-          this.successMessage=''
-        },5000)
+          this.isLoading=true;
+        },1000)
+        setTimeout(()=>{
+        this.isLoading=false;
+        this.router.navigate(['/home']);
+        },3000)
       },
       (error)=>{
         console.error('login failed',error)
